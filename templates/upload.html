@@ -1,0 +1,150 @@
+{% extends "base.html" %} {% block title %}Upload - AI Sign Language
+Recognition{% endblock %} {% block content %}
+<div class="container upload-page mt-5">
+  <!-- 🎯 AI Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>AI-Powered Sign Recognition</h1>
+      <p>
+        Upload an image and let our deep-learning model translate your gestures.
+      </p>
+    </div>
+    <img
+      src="https://media.istockphoto.com/id/1435908419/photo/deaf-indian-girl-and-mother-communicating-using-sign-language.jpg?s=612x612&w=0&k=20&c=z16KKzdGp_KBeXl2fFYilrPuqvwVykE1DT2sFsh3tvY="
+      alt="AI Sign Recognition"
+      class="hero-image"
+    />
+  </div>
+
+  <h2 class="fw-bold text-center mt-4">
+    Upload an Image for Sign Language Recognition
+  </h2>
+  <p class="lead text-center">
+    Use our AI system to translate hand gestures into text & speech.
+  </p>
+
+  <!-- Step-by-Step Instructions -->
+  <div class="steps mt-4">
+    <h3>How to Use:</h3>
+    <ul>
+      <li>📂 Click or Drag & Drop an image to upload.</li>
+      <li>📸 Ensure the hand gesture is clear and well-lit.</li>
+      <li>🤖 Our AI will analyze and predict the sign language.</li>
+      <li>🔊 You will get text & speech output instantly.</li>
+    </ul>
+  </div>
+
+  <!-- 🔄 Drag & Drop Upload Box -->
+  <div class="upload-box" id="drop-area">
+    <input
+      type="file"
+      id="imageUpload"
+      class="form-control"
+      accept="image/*"
+      hidden
+    />
+    <div class="upload-content">
+      <img
+        src="https://cdn-icons-png.freepik.com/256/8600/8600433.png?ga=GA1.1.1807920691.1731138054&semt=ais_hybrid"
+        alt="Upload"
+        class="upload-icon"
+      />
+      <p>Drag & Drop an image here or <span class="browse-btn">Browse</span></p>
+    </div>
+  </div>
+
+  <!-- OR Simple Upload Box (Fallback UI) -->
+  <div class="upload-box mt-4">
+    <h3 class="text-center">Simple Upload</h3>
+    <input type="file" id="simpleUpload" class="form-control" />
+    <button class="btn btn-info mt-3 w-100" onclick="uploadImage()">
+      Predict
+    </button>
+  </div>
+
+  <!-- Supported File Formats -->
+  <div class="supported-formats">
+    <p><strong>Accepted File Types:</strong> JPG, PNG, JPEG</p>
+    <p><strong>Max File Size:</strong> 5MB</p>
+  </div>
+
+  <div class="row d-flex justify-content-between align-items-center">
+    <!-- Preview & Predict Button -->
+    <div class="preview-container">
+      <img id="preview-image" class="image-preview" style="display: none" />
+      <button
+        class="btn btn-primary mt-3"
+        id="predict-btn"
+        style="display: none"
+        onclick="uploadImage()"
+      >
+        Predict
+      </button>
+    </div>
+  
+    <!-- 🔮 Prediction Output -->
+    <div id="predictionResult" class="prediction-box mt-3 text-center h1"></div>
+  </div>
+  
+  <!-- 🎙️ AI Speech Output -->
+  <button
+    id="speak-btn"
+    class="btn btn-secondary mt-3"
+    style="display: none"
+    onclick="speakPrediction()"
+  >
+    🔊 Speak
+  </button>
+
+  <!-- 🖼️ Example Images -->
+  <div class="example-images mt-5">
+    <h3>Try with Example Images</h3>
+    <div class="image-gallery">
+      <div class="image-container">
+        <img
+          src="/static/images/hello.png"
+          alt="Hello Sign"
+          class="example-img"
+        />
+        <span class="image-caption">Hello Sign</span>
+      </div>
+      <div class="image-container">
+        <img
+          src="/static/images/thankyou.png"
+          alt="Thank You Sign"
+          class="example-img"
+        />
+        <span class="image-caption">Thank You Sign</span>
+      </div>
+      <div class="image-container">
+        <img src="/static/images/yes.png" alt="Yes Sign" class="example-img" />
+        <span class="image-caption">Yes Sign</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ❓ FAQ Section -->
+  <div class="faq mt-5">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item">
+      <h5>❓ What if my image is not detected?</h5>
+      <p>
+        Make sure the image is clear, well-lit, and has only one hand gesture.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h5>❓ How accurate is the AI?</h5>
+      <p>
+        Our deep learning model has an accuracy of 95% with trained datasets.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h5>❓ Can I use live camera instead?</h5>
+      <p>
+        Yes! Use our <a href="/camera">Camera Capture</a> page to predict in
+        real-time.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Camera - Sign Language AI{% endblock %}
+
+{% block content %}
+<div class="video-container">
+    <video id="video" autoplay></video>
+    <button class="btn btn-primary mt-3" onclick="startCamera()">Start Camera</button>
+    <button class="btn btn-danger mt-3" onclick="stopCamera()">Stop Camera</button>
+    <button class="btn btn-success mt-3" onclick="takePicture()">Capture</button>
+    <button class="btn btn-info mt-3" onclick="predictCapturedImage()">Predict</button>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <img id="capturedImage" class="image-preview" style="display: none;">
+    <div id="predictionResult" class="prediction-box mt-3"></div>
+</div>
+{% endblock %}

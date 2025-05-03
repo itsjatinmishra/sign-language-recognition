@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Home - Indian National Association for the Deaf{% endblock %}
+{% block content %}
+
+<!-- Marquee for Awareness -->
+<marquee behavior="scroll" direction="left" scrollamount="8" class="marquee">
+    Welcome to the Indian National Association of the Deaf - Empowering communication through AI-powered Sign Language Recognition.
+</marquee>
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>Bridging Communication Gaps with AI</h1>
+    <p>
+      Experience cutting-edge gesture recognition with real-time AI predictions, designed to assist the deaf and hard-of-hearing community.
+    </p>
+    <a href="/upload" class="btn btn-primary">Try Now</a>
+  </div>
+ 
+  <img
+    src="https://s.france24.com/media/display/84fd8cae-1c99-11ef-926d-005056bf30b7/w:980/5621bc9122ed44951b0b736cc8b2773d475c0570.jpg"
+    class="hero-image"
+    alt="AI-powered Sign Language Recognition"
+  />
+</div>
+
+<!-- Features Section -->
+<section class="features">
+  <div class="feature">
+    <img src="https://s3.youthkiawaaz.com/wp-content/uploads/2016/07/06032731/d-and-d.jpg"/>
+    <h2>Advanced Gesture Recognition</h2>
+    <p>
+      Our AI model recognizes hand gestures with high accuracy, enabling seamless communication.
+    </p>
+  </div>
+
+  <div class="feature">
+    <img src="https://assets.globalpartnership.org/s3fs-public/styles/standard_blog_banner/public/blog_post/image/Bangladesh-children-signing.jpg?VersionId=i1CMfN_qMzFOUIV7QMeLPVCGvJ619WEu&itok=3urBD2lz" alt="Smart Hand Scanning"/>
+    <h2>Smart Hand Scanning</h2>
+    <p>
+      Scan and interpret sign language in real-time with our deep learning-powered system, making interactions smoother.
+    </p>
+  </div>
+</section>
+
+<!-- Indian National Association for the Deaf Section -->
+<section class="association-info">
+  <h2>About Indian National Association of the Deaf</h2>
+  <p>
+    We are dedicated to empowering the deaf community through technology, education, and awareness. Our mission is to bridge the communication gap using AI-powered innovations.
+  </p>
+  <a href="/about" class="btn btn-secondary">Learn More</a>
+</section>
+
+{% endblock %}

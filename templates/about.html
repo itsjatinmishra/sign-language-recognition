@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}About - AI Sign Language Recognition{% endblock %}
+{% block content %}
+
+<div class="container about-page mt-5">
+    <h2 class="fw-bold text-center">About Our Sign Language Recognition System</h2>
+    <p class="lead text-center text-muted">Bringing AI-driven communication solutions to the Deaf and Hard-of-Hearing Community.</p>
+
+    <div class="row mt-4 align-items-center">
+        <!-- Image -->
+        <div class="col-md-6">
+            <img src="https://www.shutterstock.com/image-photo/sign-language-learning-girl-kid-600nw-2308651303.jpg" class="about-image img-fluid rounded shadow" alt="Sign Language">
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-6 text-start">
+            <h3 class="fw-bold">What is this project about?</h3>
+            <p>
+                Our AI-powered system translates sign language gestures into text and speech in real-time.  
+                It helps individuals communicate more effectively using deep learning technologies.
+            </p>
+
+            <h3 class="fw-bold">How It Works</h3>
+            <div class="steps">
+                <div class="step d-flex align-items-center">
+                    <span class="icon bg-primary text-white rounded-circle me-3">📷</span>
+                    <p>Users **capture an image** or **use the live camera feed**.</p>
+                </div>
+                <div class="step d-flex align-items-center">
+                    <span class="icon bg-success text-white rounded-circle me-3">🤖</span>
+                    <p>The AI **analyzes the gesture** using trained deep learning models.</p>
+                </div>
+                <div class="step d-flex align-items-center">
+                    <span class="icon bg-danger text-white rounded-circle me-3">🔊</span>
+                    <p>The **output is displayed** and can be converted to speech.</p>
+                </div>
+            </div>
+
+            <h3 class="fw-bold">Why is this Important?</h3>
+            <p>
+                Millions of deaf individuals rely on sign language, but many struggle with communication barriers.  
+                Our system makes accessibility easier and **empowers inclusive conversations**.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    gsap.from(".about-image", { opacity: 0, y: 50, duration: 1 });
+    gsap.from(".steps .step", { opacity: 0, x: -50, duration: 0.8, stagger: 0.2 });
+</script>
+
+{% endblock %}
